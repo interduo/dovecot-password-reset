@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmiana hasła</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js?render={{RECAPTCHA-SITE-KEY}}"></script>
+</head>
+
+<body>
+<div class="container">
+    <h2>Zmiana hasła</h2>
+    <form id="resetForm" action="reset.php?action=use-token" method="POST">
+        <div class="input-group">
+            <label for="password">Nowe hasło:</label>
+            <input type="password" id="password" name="password" required
+                   style="width: 100%; padding: 10px; margin: 10px 0;"/>
+        </div>
+        <div class="input-group">
+            <label for="confirm-password">Powtórz hasło:</label>
+            <input type="password" id="confirm-password" name="confirm_password" required
+                   style="width: 100%; padding: 10px; margin: 10px 0;"/>
+        </div>
+        <input type="hidden" name="token" value="{{PASSTOKEN}}"/>
+
+        <h4><b>Hasło musi zawierać:</b></h4>
+        <div id="message">
+            <p id="letter" class="invalid">mała litera</p>
+            <p id="capital" class="invalid">duża litera</p>
+            <p id="number" class="invalid">cyfra</p>
+            <p id="minlength" class="invalid">minimum 12 znaków</p>
+            <p id="maxlength" class="invalid">maksimum 24 znaki</p>
+            <p id="specialchar" class="invalid">znak specjalny</p>
+            <p id="samepass" class="invalid">te same hasła w obu polach</p><br>
+        </div>
+
+        <button type="submit" id="submit-button" disabled>Zmień hasło</button>
+    </form>
+</div>
+
+<script type="text/javascript" src="js/check-pass-validity.js"></script>
+
+</body>
+
+</html>

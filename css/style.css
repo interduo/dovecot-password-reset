@@ -1,0 +1,109 @@
+#message {
+  color: #000;
+  position: relative;
+  margin-top: 15px;
+}
+
+#message p {
+  padding-left: 25px;
+  font-size: 1em;
+  margin-bottom: 0em;
+}
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  content: "\2705";
+  left: -10px;
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  content: "\274C";
+  left: -10px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    }
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+    }
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    }
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-group input.error {
+    border-color: red;
+}
+
+.error-text {
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+.g-recaptcha {
+    margin-top: 15px;
+}
+
+button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #125ea0;
+}

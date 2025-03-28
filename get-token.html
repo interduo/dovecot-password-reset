@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapomniałem hasło</title>
+    <script src="https://www.google.com/recaptcha/api.js?render={{RECAPTCHA-SITE-KEY}}"></script>
+    <script src="js/check-form-validity.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Resetowanie hasła</h2>
+        <form id="resetForm" action="reset.php?action=get-token" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-text">Wprowadź poprawny adres email.</span>
+            </div>
+            <div class="input-group">
+                <label for="backup_email">Skrzynka pomocnicza</label>
+                <input type="email" id="backup_email" name="backup_email" required>
+                <span class="error-text">Wprowadź poprawny adres email.</span>
+            </div>
+            <button id="submitButton" disabled>OK</button>
+        </form>
+    </div>
+
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('{{RECAPTCHA-SITE-KEY}}', {action: 'submit'}).then(function(token) {
+                var input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = 'g-recaptcha-response';
+                input.value = token;
+                document.getElementById('resetForm').appendChild(input);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
