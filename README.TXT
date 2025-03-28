@@ -1,5 +1,6 @@
-Projekt resetowania haseł dla użytkowników Dovecot (aktualnie wspiera backend: PostgreSQL)
-Stworzyłem ten projekt, ponieważ nie znalazłem podobnego rozwiązania w serwisach takich jak GitHub. Pozwala on użytkownikom poczty e-mail na serwerze Dovecot resetować swoje hasła za pomocą pomocniczego adresu e-mail.
+Formularz resetowania haseł dla użytkowników Dovecot.
+
+Stworzyłem ten projekt, ponieważ nie znalazłem podobnego rozwiązania w serwisach takich jak GitHub. Pozwala on użytkownikom poczty e-mail na serwerze z oprogramowaniem Dovecot resetować swoje hasła za pomocą dodatkowego pomocniczego adresu e-mail.
 
 Instalacja:
 1. Skopiuj pliki do wybranego katalogu WWW,
@@ -10,7 +11,7 @@ Instalacja:
 
 Wymagania:
 - backend postgresql
-- aktualnie wymaga dovecot z pakietu iRedMail (ale można łatwo użyć innego pola zamiast employeeid),
+- aktualnie wymaga dovecot z pakietu iRedMail (ale można łatwo użyć innego pola zamiast employeeid z bazydanych),
 
 Potrzebne do konfiguracji:
 - konto mailowe do powiadomień,
