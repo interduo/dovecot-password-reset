@@ -1,6 +1,6 @@
 Formularz resetowania haseł dla użytkowników Dovecot.
 
-Stworzyłem ten projekt, ponieważ nie znalazłem podobnego rozwiązania w serwisach takich jak GitHub. Formularz pozwala użytkownikom poczty e-mail na serwerze z oprogramowaniem Dovecot resetować swoje hasła za pomocą dodatkowego pomocniczego adresu e-mail.
+Stworzyłem ten projekt, ponieważ nie znalazłem podobnego rozwiązania w serwisach takich jak GitHub. Formularz pozwala użytkownikom poczty e-mail na serwerze z oprogramowaniem Dovecot samodzielnie (bez pomocy administratora) resetować swoje hasła za pomocą dodatkowego pomocniczego adresu e-mail.
 
 Instalacja:
 1. Skopiuj pliki do wybranego katalogu WWW,
@@ -8,6 +8,7 @@ Instalacja:
 3. Skonfiguruj wszystkie zmienne w pliku config.php,
 4. curl -sS https://getcomposer.org/installer | php
 5. php composer.phar update
+6. Opcjonalnie można dodać link do webmaila (np. roundcube) pod pasek logowania "Zapomniałem hasło" do tego formularza.
 
 Wymagania:
 - backend postgresql
