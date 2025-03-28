@@ -1,6 +1,6 @@
 Formularz resetowania haseł dla użytkowników Dovecot.
 
-Stworzyłem ten projekt, ponieważ nie znalazłem podobnego rozwiązania w serwisach takich jak GitHub. Pozwala on użytkownikom poczty e-mail na serwerze z oprogramowaniem Dovecot resetować swoje hasła za pomocą dodatkowego pomocniczego adresu e-mail.
+Stworzyłem ten projekt, ponieważ nie znalazłem podobnego rozwiązania w serwisach takich jak GitHub. Formularz pozwala użytkownikom poczty e-mail na serwerze z oprogramowaniem Dovecot resetować swoje hasła za pomocą dodatkowego pomocniczego adresu e-mail.
 
 Instalacja:
 1. Skopiuj pliki do wybranego katalogu WWW,
